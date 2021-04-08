@@ -18,15 +18,15 @@ function setup(){
     ground = new Ground();
     ball = new Paper();
 
-	bin = createSprite(620,500,20,50);
+	bin = createSprite(620,500,500,200);
     bin.addImage(binImages);
     bin.scale = 0.50;
 
-	lineL = new Bin(570,520,20,100);
-	lineR = new Bin(675,520,20,100);
-	lineB = new Bin(620,570,120,20);
+	lineL = new Bin(550,490,20,200);
+	lineR = new Bin(690,490,20,200);
+	lineB = new Bin(620,570,200,20);
 
-	slingshot = new SlingShot(ball.body,{x:200, y:50});
+	slingshot = new SlingShot(ball.body,{x:400, y:100});
 	//Create the Bodies Here.
   
 }
@@ -36,14 +36,14 @@ function draw(){
 
 	ground.display();
     ball.display();
-    //bin.display();
-	lineL.display();
-    lineR.display();
-    lineB.display();
+    bin.display();
+	//lineL.display();
+    //lineR.display();
+    //lineB.display();
     
 	slingshot.display();
 
-    drawSprites();
+    //drawSprites();
 }
 
 function mouseDragged(){

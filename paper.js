@@ -2,7 +2,7 @@ class Paper{
   constructor(){
       var options ={
           
-          restitution :0.3,
+          restitution :0.1,
           friction :0.5,
           density :1.7
           
@@ -16,8 +16,10 @@ class Paper{
       var pos = this.body.position;
       var angle = this.body.angle;
       fill("white");
+      push()
       rotate(angle);
       imageMode(CENTER);
       image(this.image,pos.x,pos.y,33,33);
+      pop()
   }
 }
